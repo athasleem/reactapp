@@ -1,12 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import AppComponent from "./AppComponent";
+import Parent from "./Family/parent";
+import Alphabet from "./Alphabet/alphabet";
+import Counter from "./counter/counter";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+var position= document.getElementById("root")
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render (<div>
+                 <AppComponent></AppComponent>
+                <hr></hr>
+             <Parent nameson="arshad" namedaughter="shahida">mehra </Parent>
+             <hr></hr>
+             <Parent nameson="abdul" namedaughter="ayesha">nehra </Parent>
+             <hr></hr>
+             <Alphabet fcolor="red" bcolor="yellow">R</Alphabet>
+             <Alphabet fcolor="red" bcolor="green">A</Alphabet>              
+            <Alphabet fcolor="red" bcolor="blue">I</Alphabet>
+            <Alphabet fcolor="red" bcolor="aqua">N</Alphabet>
+            <Alphabet fcolor="red" bcolor="brown">B</Alphabet>
+             <Alphabet fcolor="red" bcolor="black">O</Alphabet>
+            <Alphabet fcolor="red" bcolor="yellow">W</Alphabet>
+            <hr></hr>
+            <Counter></Counter>
+             </div>,position)
+
